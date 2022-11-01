@@ -1,12 +1,12 @@
-package se.bjoremo.christine.cvservice.service;
+package se.bjoremo.cvservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import se.bjoremo.christine.cvservice.model.Education;
-import se.bjoremo.christine.cvservice.model.Experience;
-import se.bjoremo.christine.cvservice.model.Person;
-import se.bjoremo.christine.cvservice.model.Technic;
-import se.bjoremo.christine.cvservice.model.Trustee;
+import se.bjoremo.cvservice.model.Education;
+import se.bjoremo.cvservice.model.Experience;
+import se.bjoremo.cvservice.model.Person;
+import se.bjoremo.cvservice.model.Technic;
+import se.bjoremo.cvservice.model.Trustee;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,10 +1,10 @@
-package se.bjoremo.christine.cvservice.service;
+package se.bjoremo.cvservice.service;
 
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import se.bjoremo.christine.cvservice.model.Technic;
+import se.bjoremo.cvservice.model.Technic;
 
 public interface TechnicSkillRepository extends JpaRepository<Technic, UUID> {
     

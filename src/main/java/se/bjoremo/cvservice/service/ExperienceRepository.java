@@ -1,8 +1,8 @@
-package se.bjoremo.christine.cvservice.service;
+package se.bjoremo.cvservice.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import se.bjoremo.christine.cvservice.model.Experience;
+import se.bjoremo.cvservice.model.Experience;
 
 import java.util.List;
 import java.util.Optional;

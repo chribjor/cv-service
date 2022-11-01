@@ -1,15 +1,15 @@
-package se.bjoremo.christine.cvservice.controller;
+package se.bjoremo.cvservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import se.bjoremo.christine.cvservice.model.Education;
-import se.bjoremo.christine.cvservice.model.Experience;
-import se.bjoremo.christine.cvservice.model.Person;
-import se.bjoremo.christine.cvservice.model.Technic;
-import se.bjoremo.christine.cvservice.model.Trustee;
-import se.bjoremo.christine.cvservice.service.CvService;
+import se.bjoremo.cvservice.model.Education;
+import se.bjoremo.cvservice.model.Experience;
+import se.bjoremo.cvservice.model.Person;
+import se.bjoremo.cvservice.model.Technic;
+import se.bjoremo.cvservice.model.Trustee;
+import se.bjoremo.cvservice.service.CvService;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package se.bjoremo.christine.cvservice.model;
+package se.bjoremo.cvservice.model;
 
 import lombok.*;
 
