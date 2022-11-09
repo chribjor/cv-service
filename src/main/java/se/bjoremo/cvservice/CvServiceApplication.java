@@ -1,4 +1,4 @@
-package se.bjoremo.christine.cvservice;
+package se.bjoremo.cvservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

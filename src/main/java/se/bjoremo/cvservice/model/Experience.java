@@ -16,10 +16,11 @@ public class Experience {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
   private UUID id;
 
   @ManyToOne
-  @JoinColumn(name = "person_id", nullable = true)
+  @JoinColumn(name = "person_id")
   private Person person;
 
   @Column(name = "title")

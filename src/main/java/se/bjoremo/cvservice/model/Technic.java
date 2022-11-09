@@ -19,6 +19,10 @@ public class Technic {
     @Column(name = "id")
     private UUID id;
 
+    @ManyToOne
+    @JoinColumn(name = "person_id", nullable = true)
+    private Person person;
+
     @ManyToMany(mappedBy = "technics")
     private Set<Person> persons = new HashSet<>();
 

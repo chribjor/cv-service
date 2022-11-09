@@ -20,6 +20,11 @@ public class Trustee {
     @Column(name = "id")
     private UUID id;
 
+
+    @ManyToOne
+    @JoinColumn(name = "person_id", nullable = true)
+    private Person person;
+
     @OneToMany(mappedBy = "trustees")
     private Set<Person> persons = new HashSet<>();
 

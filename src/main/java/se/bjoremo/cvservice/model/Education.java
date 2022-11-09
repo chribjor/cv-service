@@ -15,7 +15,7 @@ public class Education {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "education_id")
+    @Column(name = "id")
     private UUID id;
 
     @ManyToOne

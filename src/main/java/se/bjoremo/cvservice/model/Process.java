@@ -18,6 +18,10 @@ public class Process {
     @Column(name = "id")
     private UUID id;
 
+    @ManyToOne
+    @JoinColumn(name = "person_id", nullable = true)
+    private Person person;
+
     @ManyToMany(mappedBy = "processes")
     private Set<Person> persons = new HashSet<>();
 

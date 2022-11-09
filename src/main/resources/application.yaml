@@ -1,4 +1,6 @@
 spring:
+  h2:
+    console.enabled: true
   datasource:
     url: jdbc:h2:file:/data/cvdb
     username: springUser
@@ -7,6 +9,6 @@ spring:
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

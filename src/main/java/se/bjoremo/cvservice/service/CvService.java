@@ -7,6 +7,7 @@ import se.bjoremo.cvservice.model.Experience;
 import se.bjoremo.cvservice.model.Person;
 import se.bjoremo.cvservice.model.Technic;
 import se.bjoremo.cvservice.model.Trustee;
+import se.bjoremo.cvservice.model.Process;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,33 +31,31 @@ public class CvService {
     @Autowired
     private TechnicSkillRepository tecRepo;
 
-    public Optional<Experience> findExperience(String personId, UUID id){
-        return expRepo.findByPersonIdAndId(personId, id);
+    @Autowired
+    private ProcessRepository proRepo;
+
+    public Education createEducation(String personId, Education newEdu) {
+        return eduRepo.save(newEdu);
     }
 
-    public List<Experience> findAllExperiences(String personId) {
-        return expRepo.findAllByPersonId(personId);
+    public List<Education> findAllEducations(String personId){
+        return eduRepo.findAllByPersonId(personId);
+    }
+
+    public Optional<Education> findEducationById(String personId, UUID id){
+        return eduRepo.findAllByPersonIdAndId(personId, id);
     }
 
     public Experience createExperience(String userId, Experience newExp) {
         return expRepo.save(newExp);
     }
 
-    public Education findEducationById(int id){
-  //      Education uni = new Education("Karlstads univeristet", "CB", "Systemdesign", "Karlstad", new Date(), new Date(), "Kandidatexamen", UUID.randomUUID());
-        return null;
+    public List<Experience> findAllExperiences(String personId) {
+        return expRepo.findAllByPersonId(personId);
     }
 
-    public Education findAllEducations(String personId){
-        return eduRepo.findAllByPersonId(personId);
-    }
-
-    public Education createEducation(String personId, Education newEdu) {
-        return eduRepo.save(newEdu);
-    }
-
-    public Optional<Person> getPerson(String username) {
-        return perRepo.findByUsername(username);
+    public Optional<Experience> findExperienceById(String personId, UUID id){
+        return expRepo.findByPersonIdAndId(personId, id);
     }
 
     public Person createPerson(Person person) {
@@ -67,16 +66,44 @@ public class CvService {
         return perRepo.findAll();
     }
 
-    public List<Trustee> findAllTrustees() {
-        return truRepo.findAll();
+    public Optional<Person> getPerson(String username) {
+        return perRepo.findByUsername(username);
     }
 
-    public List<Technic> findAllTechnicSkills() {
-        return tecRepo.findAll();
+    public Optional<Trustee> findTrusteesById(String personId, UUID id){
+        return truRepo.findAllByPersonIdAndId(personId, id);
     }
 
-    public Technic createTechnic(Technic newTec) {
+    public Optional<Technic> findTechnicSkillsById(String personId, UUID id){
+        return tecRepo.findAllByPersonIdAndId(personId, id);
+    }
+
+    public Optional<Process> findProcessesById(String personId, UUID id){
+        return proRepo.findAllByPersonIdAndId(personId, id);
+    }
+
+    public List<Trustee> findAllTrustees(String personId) {
+        return truRepo.findAllByPersonId(personId);
+    }
+
+    public List<Technic> findAllTechnicSkills(String personId) {
+        return tecRepo.findAllByPersonId(personId);
+    }
+
+    public List<Process> findAllProcesses(String personId) {
+        return proRepo.findAllByPersonId(personId);
+    }
+
+    public Trustee createTrustee(String personId, Trustee newTru){
+        return truRepo.save(newTru);
+    }
+
+    public Technic createTechnic(String userId, Technic newTec) {
         return tecRepo.save(newTec);
+    }
+
+    public Process createProcess(String userId, Process newPro) {
+        return proRepo.save(newPro);
     }
 
 }
